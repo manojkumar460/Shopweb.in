@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redhart.in</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    
+</head>
+<body>
+
+
+    
+    <!-- Header -->
+    <header>
+          <!-- Hamburger Icon -->
+          <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+        
+       <input class="search"  type="text" placeholder="findproducts..">
+       <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+       <script>
+    document.querySelector('.search-btn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        var query = document.querySelector('.search').value;
+        alert('You searched for: ' + query);
+        // Add your search logic here, such as making an API call or redirecting to a search results page
+    });
+</script>
+    
+        <h1 class="titlef">Red<span>HART</span></h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home
+                </a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    
+    <main>
+        <section id="home" class="hero">
+            <h2>Welcome to Redhart</h2>
+            <p>Your one-stop shop for everything!</p>
+<button style="border-radius: .3em;" onclick="alert('Welcome to our store!')">Shop Now</button>
+        </section>
+        <br>
+        <br>
+        
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+        <section>
+          
+        </section>
+    </main>
+    <!-- Theme Toggle Icon -->
+<div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-sun theme-icon"></i> <!-- Default to sun icon for light mode -->
+</div>
+
+    <footer>
+        <p>&copy; 2024 Redhart. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

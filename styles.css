@@ -1,0 +1,295 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+/* Hidden header state */
+header.hidden {
+    transform: translateY(-100%);
+}
+.titlef{
+        font-family:Monospace ;
+        
+        
+}
+.titlef span{
+  color: #f60000;
+}
+.search{
+  width: 40%;
+  height: 40px;
+  margin-left: 45px;
+  
+}
+.search-btn{
+ height:40px ;
+ width: 40px;
+ color: #a30f0f;
+ border-radius: .2ex;
+ 
+}
+.search-btn i{
+  margin: -6px;
+  align-items: center;
+  vertical-align: center;
+  color: White;
+  
+}
+
+
+h1 {
+    font-size: 24px;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size:25px;
+    border-color: 4px solid red;
+    text-decoration: none;
+    
+}
+nav ul li:hover {
+        background-color: #555; /* Slightly lighter on hover */
+        text-decoration: none;
+        border: 2px solid #901313; /* Red border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 15px;
+        margin: 10px 0;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+
+nav a {
+    color: #f00; /* Red */
+    text-decoration: none;
+}
+
+/* Hide menu on mobile initially */
+#navbar {
+display: none;
+    
+}
+
+/* Hamburger Icon Fixed on the Left */
+.hamburger {
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    position:Fixed;
+    top: 4px;  /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 20;
+    background-color: #bc0000;
+    padding: 10px;
+    border-radius: 5px ;
+    
+    
+}
+
+.hamburger span {
+    background-color: #ffffff; /* Red */
+    height: 3px;
+    width: 25px;
+    
+    margin: 3px 0;
+    transition: 0.3s;
+    
+}
+/* Transformations for "X" icon */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -10px);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 78%;
+        height: 98%;
+        background-color: #333;
+        text-align: center;
+        overflow: hidden;
+        transition: left 0.2s ease;
+        z-index: 5; /* Positioned below the hamburger icon */
+        border-color: 2px #8b0b0b;
+    box-shadow: 
+    10px 15px 12px rgba(0, 0, 0, 0.3),
+    8px 12px 10px rgba(0, 0, 0, 0.3), /* First shadow */
+    5px 8px 6px rgba(0, 0, 0, 0.3),  /* Second shadow */
+    3px 6px 5px rgba(0, 0, 0, 0.3);  /* Third shadow */
+    }
+    
+
+    #navbar.active {
+        left: 0;
+        
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        opacity: 0;
+        
+        animation: slideIn 0.8s forwards;
+}
+    }
+
+    nav ul li:nth-child(1) { animation-delay : 0.4s; }
+    nav ul li:nth-child(2) { animation-delay: 0.6s; }
+    nav ul li:nth-child(3) { animation-delay: 0.8s; }
+    nav ul li:nth-child(4) { animation-delay: 1s; }
+
+    /* Animation for sliding in menu items */
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+    #navbar {
+        display: block;
+        position: static;
+    }
+}
+
+/* Hero Section */
+.hero {
+    
+    color: #a90a0a;
+    padding: 40px 20px;
+    text-align: center;
+    
+    background-image: url('1730749810006.webp');
+    background-size: cover; /* Make the image cover the whole element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    box-shadow: 2px  6px;
+    
+    text-shadow: 5px 8px 5px rgba(0, 0, 0, 0.3);,3px 6px 3px rgba(0, 0, 0, 0.3); /* X-offset, Y-offset, blur radius, color */
+     solid #000000;
+    opacity: 0.9;
+
+}
+
+button {
+    background-color: #f00; /* Red */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c00; /* Darker Red */
+}
+
+main {
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+    width: calc(33% - 20px);
+    vertical-align: top;
+}
+
+.product-card img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Theme Toggle Icon Styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 40px; /* 40px above the bottom edge */
+    right: 15px;  /* Right side of the screen */
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 20;
+    color: #333; /* Default color for light mode */
+
+}
+
+/* Light Theme (default) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-theme .theme-toggle {
+    color: #f4f4f4; /* Lighter color for dark mode */
+}
+
+/* Header Dark Mode */
+header.dark-theme, .hamburger.dark-theme {
+    background-color: #222; /* Darker background for header and hamburger icon */
+    color: #f4f4f4;
+}
