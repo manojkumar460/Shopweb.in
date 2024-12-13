@@ -1,0 +1,11 @@
+||example.com/images/*
+||example.com/*/image/*
+||example.com/*.jpg$image
+||example.com/*.png$image
+||example.com/*.gif$image
+||example.com/*/assets/image/*$image
+||example.com/*/media/*$image
+||example.com/*/static/*$image
+||example.com/*/*.jpg$third-party
+||example.com/*/*.png$third-party
+||example.com/*/*.gif$third-party
